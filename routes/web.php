@@ -23,3 +23,7 @@ Route::get('/test', function (\Illuminate\Http\Request $request) {
 });
 
 Route::get('/blog/{post}', 'BlogController@show');
+
+Route::get('/tariff-add-ons', 'TariffAddOnController@index');
+Route::get('/tariff-add-ons/create', 'TariffAddOnController@create');
+Route::post('/tariff-add-ons', 'TariffAddOnController@store');
