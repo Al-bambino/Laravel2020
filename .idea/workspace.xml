@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e7e2985-e40d-42bc-9313-4a009729082f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TariffAddOnController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/TariffAddOn.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_28_103153_create_tariff_add_ons_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tariffAddOn/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tariffAddOn/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TariffAddOnRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/ContactMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tariffAddOn/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TariffAddOnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TariffAddOnController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TariffAddOn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TariffAddOn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tariffAddOn/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tariffAddOn/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,32 +176,56 @@
       <workItem from="1589451628401" duration="8845000" />
       <workItem from="1590522733435" duration="314000" />
     </task>
+    <task id="LOCAL-00001" summary="prvi cas">
+      <created>1590664235464</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590664235464</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prvi cas" />
+    <option name="LAST_COMMIT_MESSAGE" value="prvi cas" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589458835448">
+    <state x="443" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590668364485">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1589458835448" />
+    <state x="443" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590668364485" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590669297938">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590669297938" />
+    <state x="420" y="117" key="CommitChangelistDialog2" timestamp="1590664234988">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="420" y="117" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590664234988" />
     <state x="532" y="341" key="NewPhpClassDialog" timestamp="1588856108949">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="532" y="341" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588856108949" />
-    <state x="660" y="453" key="NewPhpFileDialog" timestamp="1590662959154">
+    <state x="660" y="453" key="NewPhpFileDialog" timestamp="1590670479403">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="660" y="453" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590662959154" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1588851778161">
+    <state x="660" y="453" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590670479403" />
+    <state x="619" y="241" key="RollbackChangesDialog" timestamp="1590664491584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1588851778161" />
-    <state width="598" height="446" key="SwitcherDM" timestamp="1590663257308">
+    <state x="619" y="241" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590664491584" />
+    <state x="341" y="164" key="SettingsEditor" timestamp="1590665733845">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="598" height="446" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1590663257308" />
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1590665733845" />
+    <state width="598" height="446" key="SwitcherDM" timestamp="1590670323040">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="598" height="446" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1590670323040" />
     <state x="517" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1588949725514">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -207,9 +234,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="513" y="262" width="653" height="526" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590663185678" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590662554262">
+    <state width="519" height="308" key="javadoc.popup.new" timestamp="1590669373261">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590662554262" />
+    <state width="519" height="308" key="javadoc.popup.new/0.0.1680.1050@0.0.1680.1050" timestamp="1590669373261" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590669272942">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590669272942" />
   </component>
 </project>

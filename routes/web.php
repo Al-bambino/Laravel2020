@@ -26,4 +26,6 @@ Route::get('/blog/{post}', 'BlogController@show');
 
 Route::get('/tariff-add-ons', 'TariffAddOnController@index');
 Route::get('/tariff-add-ons/create', 'TariffAddOnController@create');
+Route::get('/tariff-add-ons/{tariffAddOn}/edit', 'TariffAddOnController@edit');
 Route::post('/tariff-add-ons', 'TariffAddOnController@store');
+Route::put('/tariff-add-ons/{tariffAddOn}','TariffAddOnController@update');

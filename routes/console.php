@@ -1,8 +1,11 @@
 <?php
 
+use App\Mail\ContactMail;
 use App\Post;
+use App\TariffAddOn;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,19 +23,22 @@ Artisan::command('inspire', function () {
 })->describe('Display an inspiring quote');
 
 
-Artisan::command('test:test', function () {
+Artisan::command('test', function () {
 
-    $post = new Post();
-    $post->slug = 'patke';
-    $post->body = 'Blog o patkama';
-    $post->title = 'Patke su najbolje';
-    $post->save();
+  $a =   TariffAddOn::query()
+               ->where('id', '=', 3)
+               ->where('price', '=', 100)
+               ->first();
+
+        TariffAddOn::all();
+  dd($a);
+//               ->dd();
+
+});
 
 
-    $post = Post::query()
-                ->where('slug', '=', 'patke')
-                ->first();
+Artisan::command('send:email', function () {
 
-    dd($post);
+   Mail::to('tmihajlovic@raf.rs')->send(new ContactMail("Barak Obama"));
 
 });

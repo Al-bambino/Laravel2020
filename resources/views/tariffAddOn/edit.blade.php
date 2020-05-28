@@ -11,21 +11,20 @@
 
 <h1> Create new Tariff add-on</h1>
 
-<form method="POST" action="/tariff-add-ons">
-
-
+<form method="POST" action="/tariff-add-ons/{{ $tariffAddOn->id }}">
     @csrf
+    @method('PUT')
+
     <label for="type">Name</label>
-    <input type="text" name="type" id="type">
+    <input type="text" name="type" id="type" value="{{$tariffAddOn->type}}">
     @error('type')
         <p> {{ $message }}</p>
     @enderror
 
-
     <label for="price">Price</label>
-    <input type="number" step=".01" name="price" id="price">
+    <input type="number" step=".01" name="price" id="price" value="{{$tariffAddOn->price}}">
     @error('price')
-    <p> {{ $message }}</p>
+        <p> {{ $message }}</p>
     @enderror
 
     <input type="submit">
