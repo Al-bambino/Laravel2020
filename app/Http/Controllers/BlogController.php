@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\DB;
 
 class BlogController
 {
-    public function home()
+    public function landing()
     {
-        return view('welcome');
+        return view('landing');
     }
 
     public function about()

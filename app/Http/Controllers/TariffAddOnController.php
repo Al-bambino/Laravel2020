@@ -12,6 +12,8 @@ class TariffAddOnController extends Controller
 
     public function index()
     {
+
+        dd(Auth::user()->name);
         // first
         // get
         // all
