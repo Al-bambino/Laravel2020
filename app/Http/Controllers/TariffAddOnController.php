@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\TariffAddOnRequest;
 use App\TariffAddOn;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TariffAddOnController extends Controller
 {
@@ -15,7 +16,7 @@ class TariffAddOnController extends Controller
         // get
         // all
         // find
-        return TariffAddOn::findOrFail(26);
+//        return TariffAddOn::findOrFail(26);
         return TariffAddOn::all(['price', 'type']);
 //        return TariffAddOn::where('price', ">", 100)->get();
 
@@ -34,7 +35,6 @@ class TariffAddOnController extends Controller
 
     public function update(TariffAddOnRequest $request, TariffAddOn $tariffAddOn)
     {
-
         $tariffAddOn->update($request->only(['price', 'type']));
         return redirect('/tariff-add-ons');
     }

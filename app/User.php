@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function internetProvider()
+    {
+        return $this->belongsTo(InternetProvider::class);
+    }
+
+    public function tariffAddOns()
+    {
+        return $this->belongsToMany(TariffAddOn::class)->withTimestamps();
+    }
 }

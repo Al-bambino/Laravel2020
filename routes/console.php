@@ -3,6 +3,7 @@
 use App\Mail\ContactMail;
 use App\Post;
 use App\TariffAddOn;
+use App\User;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
@@ -25,14 +26,16 @@ Artisan::command('inspire', function () {
 
 Artisan::command('test', function () {
 
-  $a =   TariffAddOn::query()
-               ->where('id', '=', 3)
-               ->where('price', '=', 100)
-               ->first();
+//  $a =   TariffAddOn::query()
+//               ->where('id', '=', 3)
+//               ->where('price', '=', 100)
+//               ->first();
+//
+//        TariffAddOn::all();
+//  dd($a);
 
-        TariffAddOn::all();
-  dd($a);
-//               ->dd();
+    $user = User::first();
+    dd($user->internetProvider->name);
 
 });
 
@@ -41,4 +44,24 @@ Artisan::command('send:email', function () {
 
    Mail::to('tmihajlovic@raf.rs')->send(new ContactMail("Barak Obama"));
 
+});
+
+
+Artisan::command('create:user', function () {
+
+    /** @var \App\InternetProvider $internetPrivider */
+    $internetPrivider = \App\InternetProvider::find(2);
+    $internetPrivider->users()->create([
+        'email' => 'pera@gmail.com',
+        'name' => 'pera',
+        'password' => 'pera',
+    ]);
+//    $user = new User();
+//
+//    $user->email = 'pera@gmail.com';
+//    $user->name = 'Pera';
+//    $user->password = 'Pera';
+//    $user->internet_provider_id = 1;
+//
+//    $user->save();
 });
